@@ -1,0 +1,68 @@
+.container{
+  width: 1200px;
+  margin: 0 auto;
+  // @include desktop-md{
+  //   width: 960px;
+  // }
+  // @include iPhone-X-horizontal{
+  //   width: 700px;
+  // }
+  // @include tablet{
+  //   width: 700px;
+  // }
+  // @include iPhone6-horizontal{
+  //   width: 630px;
+  // }
+  // @include Mobile-horizontal{
+  //   width: 95%;
+  //   text-align: center;
+  // }
+}
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align-last: left;
+}
+.text-right{
+  text-align: right;
+}
+.hide{
+  overflow: hidden;
+}
+.position-relative{
+  position: relative;
+}
+.position-absolute{
+  position: absolute;
+}
+.position-fixed{
+  position: fixed;
+}
+.border-radius{
+  border-radius: 10px;
+}
+.float-left{
+  float: left;
+}
+.float-right{
+  float: right;
+}
+.ds-inline-block{
+  display: inline-block;
+}
+.m-auto{
+  margin: 0 auto;
+}
+.mr-20{
+  margin-right: 20px;
+}
+.bg-adult {
+  background-color: $color-primary;
+}
+.bg-child {
+  background-color: $color-danger;
+}
+.bg-dark {
+  background-color: $color-dark;
+}

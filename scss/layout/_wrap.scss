@@ -1,0 +1,38 @@
+.wrap {
+  height: 632px;
+  background: #73C0D8 0% 0% no-repeat padding-box;
+  .mask {
+    width: 864px;
+    height: 100%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    clip-path: polygon(0 0, 33% 0, 100% 100%, 0% 100%);
+    top: 0;
+    left: 0;
+  }
+  .title {
+    width: 54px;
+    height: 124px;
+    font-size: 54px;
+    
+  }
+  .up {
+    top: 115px;
+    left: 103px;
+    color: $color-primary;
+  }
+  .down {
+    top: 245px;
+    left: 103px;
+    color: $color-dark3;
+  }
+  .title-e {
+    top: 400px;
+    left: -65px;
+    width: auto;
+    height: 68px;
+    font-size: 51px;
+    letter-spacing: 0;
+    color: $color-dark3;
+    transform: rotateZ(90deg);
+  }
+}
