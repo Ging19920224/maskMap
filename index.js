@@ -25,7 +25,7 @@ let value = '';
   } else {
     number.innerHTML = '1,3,5,7,9';
   };
-}())
+}());
 navigator.geolocation.getCurrentPosition((position)=> {
   const greenIcon = new L.Icon({
     iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
@@ -52,7 +52,7 @@ navigator.geolocation.getCurrentPosition((position)=> {
   }).catch(function (error) {
     console.log(error);
   });
-
+  
   function keyFunction() {
     if (event.keyCode == 13) {
       value = input.value;

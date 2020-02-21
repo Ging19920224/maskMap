@@ -25,6 +25,9 @@
     @include iPhone-X-horizontal{
       display: none;
     }
+    @include tablet{
+      display: none;
+    }
   }
   .up {
     top: 115px;
@@ -59,6 +62,9 @@
       left: 80px;
     }
     @include iPhone-X-horizontal{
+      display: none;
+    }
+    @include tablet{
       display: none;
     }
   }

@@ -33,6 +33,11 @@
     @content
   }
 };
+@mixin iPhone5-horizontal {
+  @media screen and (min-width: 560px) and (max-width: 570px) {
+    @content
+  }
+};
 @mixin Mobile {
   @media screen and (max-width: 480px) {
     @content

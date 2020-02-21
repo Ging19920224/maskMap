@@ -20,6 +20,11 @@
     border-bottom-right-radius: 0;
     height: 100vh;
   }
+  @include tablet{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 100vh
+  }
   #map {
     width: 64.5%;
     height: 96%;
@@ -28,6 +33,22 @@
     transform: translateY(-50%);
     @include iPhone-X-horizontal{
       width: 65%;
+    }
+    @include tablet{
+      width: 63.5%;
+    }
+    @include Mobile-horizontal{
+      width: 60%;
+    }
+    @include iPhone5-horizontal {
+      width: 55%;
+    }
+    @include Mobile {
+      width: 90%;
+      height: 38%;
+      top: 2%;
+      left: 5%;
+      transform: translateY(0%);
     }
     .marker-cluster-small {
       background-color: rgba(181, 226, 140, 0.6);
@@ -77,12 +98,43 @@
     @include iPhone-X-horizontal{
       width: 30%;
     }
+    @include tablet{
+      width: 32%;
+    }
+    @include Mobile-horizontal{
+      width: 35%;
+    }
+    @include iPhone5-horizontal {
+      width: 39%;
+    }
+    @include Mobile {
+      width: 90%;
+      height: 58%;
+      top: 40%;
+      left: 5%;
+      transform: translateY(0%);
+    }
     .info {
       width: 100%;
       height: 20%;
       background-color: $color-primary;
-      @include iPhone-X-horizontal{
+      @include iPhone-X-horizontal {
         height: 32%;
+      }
+      @include tablet {
+        height: 15%;
+      }
+      @include iPhone6-horizontal {
+        height: 32%;
+      }
+      @include iPhone5-horizontal {
+        height: 35%;
+      }
+      @include Mobile {
+        height: 25%;
+      }
+      @include iPhone5 {
+        height: 28%;
       }
     }
     .data{
@@ -91,6 +143,21 @@
       overflow: scroll;
       @include iPhone-X-horizontal{
         height: 68%;
+      }
+      @include tablet{
+        height: 85%;
+      }
+      @include iPhone6-horizontal {
+        height: 68%;
+      }
+      @include iPhone5-horizontal {
+        height: 65%;
+      }
+      @include Mobile {
+        height: 75%;
+      }
+      @include iPhone5 {
+        height: 72%;
       }
       img {
         width: 100%;
@@ -105,6 +172,12 @@
   height: 50%;
   @include iPhone-X-horizontal{
     height: 60%;
+  }
+  @include tablet{
+    height: 60%;
+  }
+  @include Mobile {
+    height: 50%;
   }
   .week {
     top: 10.5px;
@@ -121,6 +194,16 @@
       top: 20px;
       right: 28px;
     }
+    @include tablet{
+      top: 20px;
+      right: 28px;
+    }
+    @include Mobile {
+      top: 8px;
+    }
+    @include iPhone5 {
+      right: 10px;
+    }
   }
   .identity {
     top: 23.5px;
@@ -132,9 +215,24 @@
       right: 0;
       left: 15px;
     }
+    @include tablet{
+      top: 45px;
+      right: 0;
+      left: 15px;
+    }
+    @include Mobile {
+      top: 25px;
+      left: 120px;
+    }
+    @include iPhone5 {
+      left: 100px;
+    }
     .number {
       font-size: 18px;
       color: $color-info;
+      @include iPhone5 {
+        font-size: 15px;
+      }
     }
   }
 }
@@ -143,6 +241,9 @@
   width: 100%;
   height: 50%;
   @include iPhone-X-horizontal{
+    height: 40%;
+  }
+  @include tablet{
     height: 40%;
   }
   .search__input {
@@ -161,8 +262,17 @@
     }
   }
   .search__btn {
-    bottom: 10px;
+    bottom: 15px;
     right: 15px;
+    @include iPhone6-horizontal {
+      bottom: 10px;
+    }
+    @include iPhone5-horizontal {
+      bottom: 8px;
+    }
+    @include Mobile {
+      bottom: 8px;
+    }
   }
 }
 
@@ -181,6 +291,9 @@
     margin-top: 6.5px;
     margin-bottom: 3px;
     font-size: 18px;
+    @include Mobile {
+      padding: 0 20px;
+    }
   }
   p {
     padding: 0 9.5px;
@@ -188,6 +301,9 @@
     margin-top: 5px;
     margin-bottom: 0px;
     color: $color-dark3;
+    @include Mobile {
+      padding: 0 20px;
+    }
   }
   .data__warp {
     width: 100%;
@@ -197,6 +313,15 @@
     @include iPhone-X-horizontal{
       margin-right: 10px;
     }
+    @include tablet {
+      margin-right: 10px;
+    }
+    @include iPhone6-horizontal {
+      margin-right: 5px;
+    }
+    @include Mobile {
+      margin-right: 20px;
+    }
   }
   .data__number {
     display: inline-block;
@@ -204,8 +329,17 @@
     width: 130px;
     height: 28px;
     border-radius: 20px;
-    @include iPhone-X-horizontal{
+    @include iPhone-X-horizontal {
       width: 110px;
+    }
+    @include tablet {
+      width: 110px;
+    }
+    @include Mobile-horizontal{
+      width: 100px;
+    }
+    @include Mobile {
+      width: 120px;
     }
     .data__mask {
       top: 50%;
@@ -233,12 +367,32 @@
     margin-top: 1px;
     margin-bottom: 2px;
     font-size: 18px;
+    @include iPhone5 {
+      padding-left: 8px;
+    }
   }
   p {
     font-size: 12px;
     margin-top: 1.5px;
     margin-bottom: 0px;
     color: $color-dark3;
+    @include iPhone5 {
+      padding-left: 8px;
+    }
+  }
+  .mr-20 {
+    @include iPhone-X-horizontal{
+      margin-right: 10px;
+    }
+    @include tablet {
+      margin-right: 10px;
+    }
+    @include iPhone6-horizontal {
+      margin-right: 5px;
+    }
+    @include Mobile {
+      margin-right: 8px;
+    }
   }
   .mark__number {
     display: inline-block;
@@ -246,6 +400,21 @@
     width: 130px;
     height: 28px;
     border-radius: 20px;
+    @include iPhone-X-horizontal {
+      width: 110px;
+    }
+    @include tablet {
+      width: 110px;
+    }
+    @include Mobile-horizontal{
+      width: 100px;
+    }
+    @include Mobile {
+      width: 120px;
+    }
+    @include iPhone5 {
+      width: 100px;
+    }
     .mark__mask {
       top: 50%;
       left: 10px;
@@ -261,5 +430,14 @@
       font-size: 16px;
       font-weight: bold;
     }
+  }
+}
+
+.leaflet-popup-content {
+  @include iPhone5-horizontal {
+    margin: 8px 3px;
+  }
+  @include iPhone5 {
+    margin: 8px 3px;
   }
 }
