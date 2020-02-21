@@ -1,6 +1,9 @@
 .wrap {
   height: 632px;
   background: #73C0D8 0% 0% no-repeat padding-box;
+  @include desktop-md{
+    height: 100vh;
+  }
   .mask {
     width: 864px;
     height: 100%;
@@ -8,22 +11,38 @@
     clip-path: polygon(0 0, 33% 0, 100% 100%, 0% 100%);
     top: 0;
     left: 0;
+    @include desktop-md{
+      width: 100%;
+    }
   }
   .title {
     width: 54px;
     height: 124px;
     font-size: 54px;
-    
+    @include desktop-md{
+      font-size: 45px;
+    }
+    @include iPhone-X-horizontal{
+      display: none;
+    }
   }
   .up {
     top: 115px;
     left: 103px;
     color: $color-primary;
+    @include desktop-md{
+      top: 545px;
+      left: 383px;
+    }
   }
   .down {
     top: 245px;
     left: 103px;
     color: $color-dark3;
+    @include desktop-md{
+      top: 655px;
+      left: 383px;
+    }
   }
   .title-e {
     top: 400px;
@@ -34,5 +53,13 @@
     letter-spacing: 0;
     color: $color-dark3;
     transform: rotateZ(90deg);
+    @include desktop-md{
+      transform: rotateZ(0deg);
+      top: 620px;
+      left: 80px;
+    }
+    @include iPhone-X-horizontal{
+      display: none;
+    }
   }
 }
