@@ -41,7 +41,7 @@ navigator.geolocation.getCurrentPosition((position)=> {
   .then( (response) => {
     allData = response.data.features;
     getMask(allData, map);
-    // creatList(allData);
+    nearbyMask(position.coords.latitude, position.coords.longitude, allData);
     searchBtn.addEventListener('click', ()=> {
       value = input.value;
       filterData();
@@ -180,5 +180,11 @@ navigator.geolocation.getCurrentPosition((position)=> {
       return item.properties.id === id;
     });
     changeMap(targetData[0]);
+  }
+  function nearbyMask(lat, lng, data) {
+    let nearbyData = data.filter((item) => {
+      return Math.abs(item.geometry.coordinates[1] - lat) < 0.015;
+    });
+    creatList(nearbyData);
   }
 });
