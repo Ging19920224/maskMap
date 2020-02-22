@@ -258,7 +258,10 @@
   }
   .search__btn {
     bottom: 28%;
-    right: 15px;
+    right: 25px;
+    @include desktop-lg {
+      right: 15px;
+    }
     @include iPad-Pro {
       bottom: 37%;
     }
