@@ -41,7 +41,7 @@ navigator.geolocation.getCurrentPosition((position)=> {
   .then( (response) => {
     allData = response.data.features;
     getMask(allData, map);
-    creatList(allData);
+    // creatList(allData);
     searchBtn.addEventListener('click', ()=> {
       value = input.value;
       filterData();
@@ -77,17 +77,19 @@ navigator.geolocation.getCurrentPosition((position)=> {
       markers.addLayer(L.marker([item.geometry.coordinates[1], item.geometry.coordinates[0]], {icon: greenIcon})
         .bindPopup(`
           <div class="mark__info">
-            <h5>${item.properties.name}</h5>
-            <p>${item.properties.address}</p>
-            <p>${item.properties.phone}</p>
+            <h5 class="text-center">${item.properties.name}</h5>
+            <p class="text-center">${item.properties.address}</p>
+            <p class="text-center">${item.properties.phone}</p>
             <p>${item.properties.note}</p>
-            <div class="mark__number position-relative mr-20 ${adult}">
-              <span class="mark__mask position-absolute">成人口罩</span>
-              <span class="mark__num position-absolute">${item.properties.mask_adult}</span>
-            </div>
-            <div class="mark__number position-relative ${child}">
-              <span class="mark__mask position-absolute">兒童口罩</span>
-              <span class="mark__num position-absolute">${item.properties.mask_child}</span>
+            <div class="data__warp">
+              <div class="mark__number position-relative mr-20 ${adult}">
+                <span class="mark__mask position-absolute">成人口罩</span>
+                <span class="mark__num position-absolute">${item.properties.mask_adult}</span>
+              </div>
+              <div class="mark__number position-relative ${child}">
+                <span class="mark__mask position-absolute">兒童口罩</span>
+                <span class="mark__num position-absolute">${item.properties.mask_child}</span>
+              </div>
             </div>
           <div/>
         `));
@@ -155,17 +157,19 @@ navigator.geolocation.getCurrentPosition((position)=> {
       { icon: greenIcon }).addTo(map)
       .bindPopup(`
       <div class="mark__info">
-        <h5>${data.properties.name}</h5>
-        <p>${data.properties.address}</p>
-        <p>${data.properties.phone}</p>
+        <h5 class="text-center">${data.properties.name}</h5>
+        <p class="text-center">${data.properties.address}</p>
+        <p class="text-center">${data.properties.phone}</p>
         <p>${data.properties.note}</p>
-        <div class="mark__number position-relative mr-20 ${adult}">
-          <span class="mark__mask position-absolute">成人口罩</span>
-          <span class="mark__num position-absolute">${data.properties.mask_adult}</span>
-        </div>
-        <div class="mark__number position-relative ${child}">
-          <span class="mark__mask position-absolute">兒童口罩</span>
-          <span class="mark__num position-absolute">${data.properties.mask_child}</span>
+        <div class="data__warp">
+          <div class="mark__number position-relative mr-20 ${adult}">
+            <span class="mark__mask position-absolute">成人口罩</span>
+            <span class="mark__num position-absolute">${data.properties.mask_adult}</span>
+          </div>
+          <div class="mark__number position-relative ${child}">
+            <span class="mark__mask position-absolute">兒童口罩</span>
+            <span class="mark__num position-absolute">${data.properties.mask_child}</span>
+          </div>
         </div>
       <div/>
     `)

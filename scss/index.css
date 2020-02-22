@@ -939,14 +939,8 @@ body {
 }
 
 .info .search .search__btn {
-  bottom: 15px;
+  bottom: 10px;
   right: 15px;
-}
-
-@media screen and (min-width: 639px) and (max-width: 737px) {
-  .info .search .search__btn {
-    bottom: 10px;
-  }
 }
 
 @media screen and (min-width: 560px) and (max-width: 570px) {
@@ -957,7 +951,7 @@ body {
 
 @media screen and (max-width: 480px) {
   .info .search .search__btn {
-    bottom: 8px;
+    bottom: 6px;
   }
 }
 
@@ -1112,6 +1106,11 @@ body {
   }
 }
 
+.mark__info .data__warp {
+  width: 100%;
+  text-align: center;
+}
+
 @media screen and (min-width: 810px) and (max-width: 824px) {
   .mark__info .mr-20 {
     margin-right: 10px;
@@ -1193,15 +1192,15 @@ body {
   font-weight: bold;
 }
 
-@media screen and (min-width: 560px) and (max-width: 570px) {
+@media screen and (max-width: 480px) {
   .leaflet-popup-content {
-    margin: 8px 3px;
+    margin: 1px 1px;
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 560px) and (max-width: 570px) {
   .leaflet-popup-content {
-    margin: 8px 3px;
+    margin: 1px 1px;
   }
 }
 /*# sourceMappingURL=index.css.map */
