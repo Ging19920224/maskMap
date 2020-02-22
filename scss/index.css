@@ -3,12 +3,6 @@
   margin: 0 auto;
 }
 
-@media screen and (max-width: 1200px) {
-  .container {
-    width: 100%;
-  }
-}
-
 .text-center {
   text-align: center;
 }
@@ -529,12 +523,18 @@ body {
 }
 
 .view #map {
-  width: 64.5%;
+  width: 65.3%;
   height: 96%;
   top: 50%;
   right: 19.5px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+@media screen and (max-width: 1400px) {
+  .view #map {
+    width: 64.5%;
+  }
 }
 
 @media screen and (min-width: 810px) and (max-width: 824px) {

@@ -9,7 +9,7 @@
     clip-path: polygon(0 0, 33% 0, 100% 100%, 0% 100%);
     top: 0;
     left: 0;
-    @include desktop-md{
+    @include desktop-md {
       width: 100%;
     }
   }
@@ -17,10 +17,10 @@
     width: 54px;
     height: 124px;
     font-size: 54px;
-    @include iPhone-X-horizontal{
+    @include iPhone-X-horizontal {
       display: none;
     }
-    @include tablet{
+    @include tablet {
       display: none;
     }
   }
@@ -43,10 +43,10 @@
     letter-spacing: 0;
     color: $color-dark3;
     transform: rotateZ(90deg);
-    @include iPhone-X-horizontal{
+    @include iPhone-X-horizontal {
       display: none;
     }
-    @include tablet{
+    @include tablet {
       display: none;
     }
   }
