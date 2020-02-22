@@ -8,6 +8,11 @@
     @content
   }
 };
+@mixin iPad-Pro {
+  @media screen and (min-height: 1300px) and (max-height: 1366px) {
+    @content
+  }
+};
 @mixin tablet-horizontal {
   @media screen and (max-width: 992px) {
     @content
