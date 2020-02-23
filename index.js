@@ -64,9 +64,24 @@ navigator.geolocation.getCurrentPosition((position)=> {
     }
   }
   function filterData() {
-    localData = allData.filter((item) => {
-      return item.properties.address.indexOf(value) !== -1 || item.properties.name.indexOf(value) !== -1;
-    });
+    const check = '臺';
+    const check2 = '台';
+    let value2 = '';
+    if (value.indexOf(check) !== -1) {
+      value2 = value.replace('臺', '台');
+    } else if (value.indexOf(check2) !== -1) {
+      value2 = value.replace('台', '臺');
+    };
+    if (value2 !== ''){
+      localData = allData.filter((item) => {
+        return item.properties.address.indexOf(value) !== -1 || item.properties.name.indexOf(value) !== -1 || item.properties.address.indexOf(value2) !== -1 || item.properties.name.indexOf(value2) !== -1;
+      });
+    } else {
+      localData = allData.filter((item) => {
+        return item.properties.address.indexOf(value) !== -1 || item.properties.name.indexOf(value) !== -1;
+      });
+    }
+    console.log(localData);
   }
   function getMask(data, map) {
     data.forEach((item) => {
