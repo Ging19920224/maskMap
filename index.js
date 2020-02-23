@@ -12,7 +12,7 @@ let value = '';
 (function() {
   const getDate = new Date();
   const weekArray = ['日', '一', '二', '三', '四', '五', '六'];
-  let month = getDate.getMonth();
+  let month = getDate.getMonth() + 1;
   if (month < 10) month = `0${month}`;
   const todayDate = `${getDate.getFullYear()}-${month}-${getDate.getDate()}`;
   const todayWeek = weekArray[getDate.getDay()];
