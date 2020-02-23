@@ -19,7 +19,7 @@ let value = '';
   week.innerHTML = `星期${todayWeek}`;
   date.innerHTML = todayDate;
   if (getDate.getDay() === 0) {
-    identity.innerHTML = '全民皆可購買';
+    identity.innerHTML = '今日全民皆可購買';
   } else if (getDate.getDay() % 2 === 0){
     number.innerHTML = '2,4,6,8,0';
   } else {
@@ -41,7 +41,7 @@ navigator.geolocation.getCurrentPosition((position)=> {
   .then( (response) => {
     allData = response.data.features;
     getMask(allData, map);
-    nearbyMask(position.coords.latitude, position.coords.longitude, allData);
+    nearbyMask(position.coords.latitude, allData);
     searchBtn.addEventListener('click', ()=> {
       value = input.value;
       filterData();
@@ -181,7 +181,7 @@ navigator.geolocation.getCurrentPosition((position)=> {
     });
     changeMap(targetData[0]);
   }
-  function nearbyMask(lat, lng, data) {
+  function nearbyMask(lat, data) {
     let nearbyData = data.filter((item) => {
       return Math.abs(item.geometry.coordinates[1] - lat) < 0.015;
     });

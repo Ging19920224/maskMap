@@ -178,21 +178,29 @@
   .week {
     top: 10.5px;
     left: 9.3px;
-    font-size: 29px;
+    font-size: 45px;
     color: $color-light;
+    @include iPhone-X-horizontal {
+      font-size: 30px;
+    }
+    @include tablet {
+      font-size: 30px;
+    }
   }
   .date {
     top: 10.21px;
-    right: 14.41px;
-    font-size: 12px;
+    right: 8px;
+    font-size: 20px;
     color: $color-light;
     @include iPhone-X-horizontal {
       top: 20px;
-      right: 28px;
+      right: 15px;
+      font-size: 16px;
     }
     @include tablet {
       top: 20px;
-      right: 28px;
+      right: 15px;
+      font-size: 16px;
     }
     @include Mobile {
       top: 8px;
@@ -203,22 +211,27 @@
     }
   }
   .identity {
-    top: 23.5px;
+    top: 40px;
     right: 8px;
-    font-size: 8px;
+    font-size: 14px;
     color: $color-light;
     @include iPhone-X-horizontal {
-      top: 45px;
-      right: 0;
+      top: 50px;
+      right: unset;
       left: 15px;
+      font-size: 8px;
     }
     @include tablet {
-      top: 45px;
-      right: 0;
+      top: 48px;
+      right: unset;
       left: 15px;
+      font-size: 8px;
+    }
+    @include iPhone5-horizontal {
+      top: 46px;
     }
     @include Mobile {
-      top: 25px;
+      top: 27px;
       left: unset;
       right: 8px;
     }

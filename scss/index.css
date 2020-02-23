@@ -775,28 +775,42 @@ body {
 .info .time .week {
   top: 10.5px;
   left: 9.3px;
-  font-size: 29px;
+  font-size: 45px;
   color: #FFFFFF;
+}
+
+@media screen and (min-width: 810px) and (max-width: 824px) {
+  .info .time .week {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .info .time .week {
+    font-size: 30px;
+  }
 }
 
 .info .time .date {
   top: 10.21px;
-  right: 14.41px;
-  font-size: 12px;
+  right: 8px;
+  font-size: 20px;
   color: #FFFFFF;
 }
 
 @media screen and (min-width: 810px) and (max-width: 824px) {
   .info .time .date {
     top: 20px;
-    right: 28px;
+    right: 15px;
+    font-size: 16px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .info .time .date {
     top: 20px;
-    right: 28px;
+    right: 15px;
+    font-size: 16px;
   }
 }
 
@@ -814,31 +828,39 @@ body {
 }
 
 .info .time .identity {
-  top: 23.5px;
+  top: 40px;
   right: 8px;
-  font-size: 8px;
+  font-size: 14px;
   color: #FFFFFF;
 }
 
 @media screen and (min-width: 810px) and (max-width: 824px) {
   .info .time .identity {
-    top: 45px;
-    right: 0;
+    top: 50px;
+    right: unset;
     left: 15px;
+    font-size: 8px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .info .time .identity {
-    top: 45px;
-    right: 0;
+    top: 48px;
+    right: unset;
     left: 15px;
+    font-size: 8px;
+  }
+}
+
+@media screen and (min-width: 560px) and (max-width: 570px) {
+  .info .time .identity {
+    top: 46px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .info .time .identity {
-    top: 25px;
+    top: 27px;
     left: unset;
     right: 8px;
   }
