@@ -81,7 +81,6 @@ navigator.geolocation.getCurrentPosition((position)=> {
         return item.properties.address.indexOf(value) !== -1 || item.properties.name.indexOf(value) !== -1;
       });
     }
-    console.log(localData);
   }
   function getMask(data, map) {
     data.forEach((item) => {
