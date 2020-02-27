@@ -60,10 +60,8 @@ navigator.geolocation.getCurrentPosition((position) => {
       value2 = value.replace('台', '臺');
     }
     if (value2 !== '') {
-      // eslint-disable-next-line max-len
       localData = allData.filter((item) => item.properties.address.indexOf(value) !== -1 || item.properties.name.indexOf(value) !== -1 || item.properties.address.indexOf(value2) !== -1 || item.properties.name.indexOf(value2) !== -1);
     } else {
-      // eslint-disable-next-line max-len
       localData = allData.filter((item) => item.properties.address.indexOf(value) !== -1 || item.properties.name.indexOf(value) !== -1);
     }
   }
