@@ -113,7 +113,7 @@ navigator.geolocation.getCurrentPosition((position)=> {
     map.addLayer(markers);
   }
   function creatList(data) {
-    if (data == false) {
+    if (data.length === 0) {
       list.innerHTML = '<div class="data__info"><h5 class="text-center">無符合條件藥局</h5></div>'
       return;
     };
