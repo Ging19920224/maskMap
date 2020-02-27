@@ -5,6 +5,7 @@ const identity = document.querySelector('.identity');
 const input = document.querySelector('.search__input');
 const searchBtn = document.querySelector('.search__btn');
 const list = document.querySelector('.data');
+const loading = document.querySelector('.loading');
 let map = '';
 let allData = [];
 let localData = [];
@@ -42,6 +43,7 @@ navigator.geolocation.getCurrentPosition((position)=> {
     allData = response.data.features;
     getMask(allData, map);
     nearbyMask(position.coords.latitude, allData);
+    loading.style.display = 'none';
     searchBtn.addEventListener('click', ()=> {
       value = input.value;
       filterData();
