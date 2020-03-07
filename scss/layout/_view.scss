@@ -18,26 +18,36 @@
   @include iPhone-X-horizontal{
     height: 100vh;
   }
-  #map {
-    width: 65.3%;
+  .view-content {
+    width: 98%;
     height: 96%;
     top: 50%;
-    right: 19.5px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #map {
+    width: 68%;
+    height: 100%;
+    top: 50%;
+    right: 0;
     transform: translateY(-50%);
     @include desktop-lg {
-      width: 64.5%;
+      width: 64%;
+    }
+    @include desktop-md {
+      width: 62%;
     }
     @include iPhone-X-horizontal {
-      width: 65%;
+      width: 68%;
     }
     @include tablet {
-      width: 63.5%;
+      width: 66%;
     }
     @include Mobile-horizontal {
-      width: 60%;
+      width: 64%;
     }
     @include iPhone5-horizontal {
-      width: 55%;
+      width: 61%;
     }
     @include Mobile {
       width: 90%;
@@ -86,19 +96,25 @@
   }
   .menu {
     width: 32%;
-    height: 96%;
+    height: 100%;
     top: 50%;
-    left: 19.5px;
+    left: 0;
     transform: translateY(-50%);
     background-color: #fff;
-    @include iPhone-X-horizontal {
-      width: 30%;
+    @include desktop-lg {
+      width: 36%;
     }
-    @include tablet {
+    @include desktop-md {
+      width: 38%;
+    }
+    @include iPhone-X-horizontal {
       width: 32%;
     }
+    @include tablet {
+      width: 34%;
+    }
     @include Mobile-horizontal {
-      width: 35%;
+      width: 36%;
     }
     @include iPhone5-horizontal {
       width: 39%;
@@ -186,6 +202,9 @@
     @include tablet {
       font-size: 30px;
     }
+    @include iPhone5 {
+      left: 1px;
+    }
   }
   .date {
     top: 10.21px;
@@ -231,7 +250,7 @@
       top: 46px;
     }
     @include Mobile {
-      top: 27px;
+      top: 25px;
       left: unset;
       right: 8px;
     }
