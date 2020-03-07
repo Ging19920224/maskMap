@@ -519,6 +519,8 @@ body {
   border-radius: 17px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 @media screen and (max-width: 1200px) {
@@ -555,6 +557,7 @@ body {
   right: 0;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  z-index: 1;
 }
 
 @media screen and (max-width: 1400px) {
@@ -595,12 +598,12 @@ body {
 
 @media screen and (max-width: 480px) {
   .view #map {
-    width: 90%;
-    height: 38%;
-    top: 2%;
-    left: 5%;
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
+    width: 100%;
+    height: 50%;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 
@@ -655,6 +658,9 @@ body {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   background-color: #fff;
+  z-index: 2;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 @media screen and (max-width: 1400px) {
@@ -695,12 +701,38 @@ body {
 
 @media screen and (max-width: 480px) {
   .view .menu {
-    width: 90%;
-    height: 58%;
-    top: 40%;
-    left: 5%;
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
+    width: 100%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+.view .menu .menuBtn {
+  top: 20%;
+  right: -17px;
+  width: 17px;
+  height: 49px;
+  line-height: 49px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #73C0D8;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.view .menu .menuBtn:hover {
+  background-color: #FFA573;
+}
+
+@media screen and (max-width: 480px) {
+  .view .menu .menuBtn {
+    display: none;
   }
 }
 
@@ -736,13 +768,13 @@ body {
 
 @media screen and (max-width: 480px) {
   .view .menu .info {
-    height: 25%;
+    height: 32%;
   }
 }
 
 @media screen and (max-width: 320px) {
   .view .menu .info {
-    height: 28%;
+    height: 34%;
   }
 }
 

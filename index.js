@@ -9,6 +9,15 @@ const input = document.querySelector('.search__input');
 const searchBtn = document.querySelector('.search__btn');
 const list = document.querySelector('.data');
 const loading = document.querySelector('.loading');
+const menu = document.querySelector('.menu');
+const mapView = document.querySelector('#map');
+const menuBtn = document.querySelector('.menuBtn');
+const btnFont = document.querySelector('.menuBtn i');
+const menuWidth = menu.offsetWidth;
+const mapWidth = mapView.offsetWidth;
+// const mapHeight = mapView.offsetHeight;
+// const screenWidth = window.screen.width;
+let btnStatus = 'open';
 let map = '';
 let allData = [];
 let localData = [];
@@ -178,6 +187,19 @@ navigator.geolocation.getCurrentPosition((position) => {
     const nearbyData = data.filter((item) => Math.abs(item.geometry.coordinates[1] - lat) < 0.015);
     creatList(nearbyData);
   }
+  menuBtn.addEventListener('click', () => {
+    if (btnStatus === 'open') {
+      btnStatus = 'close';
+      mapView.style.width = '100%';
+      menu.style.width = '0%';
+      btnFont.style.transform = 'rotate(180deg)';
+    } else {
+      btnStatus = 'open';
+      mapView.style.width = `${mapWidth}px`;
+      menu.style.width = `${menuWidth}px`;
+      btnFont.style.transform = 'rotate(0deg)';
+    }
+  });
   axios.get('https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json').then((response) => {
     allData = response.data.features;
     getMask(allData);
